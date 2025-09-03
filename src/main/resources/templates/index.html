@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Gallery</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Meme Templates</h1>
+<div class="meme-gallery">
+    <div th:each="meme : ${memes}" class="meme-item">
+        <img th:src="${meme.url}" th:alt="${meme.name}" />
+        <p th:text="${meme.name}"></p>
+        <a th:href="@{'/edit/' + ${meme.id}}">Edit</a>
+    </div>
+</div>
+</body>
+</html>

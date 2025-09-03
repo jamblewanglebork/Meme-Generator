@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Meme</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Edit Meme</h1>
+<form action="/generate" method="post">
+    <input type="hidden" name="template_id" th:value="${memeId}" />
+    <label>Top Text: <input type="text" name="topText"></label><br>
+    <label>Bottom Text: <input type="text" name="bottomText"></label><br>
+    <button type="submit">Generate Meme</button>
+</form>
+<div th:if="${memeUrl != null}">
+    <h2>Generated Meme:</h2>
+    <img th:src="${memeUrl}" alt="Generated Meme">
+</div>
+</body>
+</html>

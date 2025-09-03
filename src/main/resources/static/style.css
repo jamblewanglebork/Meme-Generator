@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.meme-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.meme-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+}
+.meme-item img {
+    max-width: 200px;
+    height: auto;
+}
